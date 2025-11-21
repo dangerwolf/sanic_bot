@@ -11,8 +11,7 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 # 直接安装依赖，不依赖外部 requirements.txt 文件
 # 包含了你要求的: sanic, sanic-ext, httpx, requests, tqdm, aiosqlite
 RUN pip install --no-cache-dir \
-    sanic \
-    sanic-ext \
+    sanic[ext] \
     httpx \
     requests \
     tqdm \
